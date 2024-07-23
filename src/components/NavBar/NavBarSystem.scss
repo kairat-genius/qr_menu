@@ -1,0 +1,150 @@
+$Primary-600: #15c5ce;
+$Primary-100: #eefcfc;
+$color-grey-text: #4b4b4b;
+$color-white: #fff;
+$darc-grey-h1: #1f1f1f;
+$color-elips: #fff6f3;
+$color-green: #47b881;
+$color-logo: #FFF6F3;
+.wrapper{
+  max-width: 16.5rem;
+  display: inline-flex;
+  padding: 2.5rem 1.25rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.1875rem;
+  float: left;
+  background-color: $color-white;
+  
+.navbar-wrap {
+  width: 14rem;
+  display: flex;
+  padding: 2.5rem 1.25rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1875rem;
+  padding: 2.5rem 1.25rem;
+  
+  .div-logo{
+      width: 6.35419rem;
+      height: 6.12675rem;
+      flex-shrink: 0;
+      background-color: $color-logo;
+      border-radius: 50%;
+      align-items: center;
+      margin-bottom: 2.5rem;
+    
+  }
+  .btn-nav {
+    display: flex;
+    width: 11.5rem;
+    padding: 0.9375rem 3.375rem 0.9375rem 1.875rem;
+    gap: 0.1875rem;
+    flex-direction: row;
+    justify-content: flex-start;
+    cursor: pointer;
+    border-style: none;
+    background-color: $color-white;
+    border-radius: 0.25rem;
+  }
+  .btn-nav:hover {
+    background: var(--menu-active, $Primary-100);
+  }
+  .svg-menu,
+  .svg-settings,
+  .svg-home,
+  .svg-support,
+  .svg-table {
+    width: 24px;
+    height: 24px;
+    padding-top: 0.44rem;
+    padding-right: 2.35rem;
+    gap: 0.625rem;
+  }
+  .btn-title {
+    color: $color-grey-text;
+    font-family: 'Poppins';
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    padding-right: 0rem;
+  }
+  .btn-title:hover{
+    color: $Primary-600;
+  }
+  .svg-select {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    right: 18px;
+  }
+  .btn-link {
+    display: none;
+    // position: relative;
+    cursor: pointer;
+    margin: 0px 12px;
+
+    .btn-title-orders {
+      color: var(--text, $color-grey-text);
+      font-family: 'Poppins';
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      padding-top: 16px;
+      padding-left: 44px;
+    }
+  }
+}
+  @media (min-width: 768px) {
+    .navbar-wrap {
+      max-width: none;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .navbar-wrap {
+      max-width: 100vw;
+
+      .btn-nav {
+        margin: 1rem 1rem;
+      }
+
+      .svg-table {
+        padding-top: 1.5rem;
+        padding-left: 1rem;
+      }
+
+      .svg-menu,
+      .svg-settings {
+        padding-top: 1.3rem;
+        padding-left: 1rem;
+      }
+
+      .btn-title {
+        padding-top: 1.4rem;
+        padding-left: 2.5rem;
+      }
+
+      .svg-select {
+        margin-top: 1.7rem;
+        right: 1.7rem;
+      }
+
+      .btn-link {
+        display: block;
+        margin: 0rem 1rem;
+
+        .btn-title-orders {
+          padding-top: 1.6rem;
+          padding-left: 4rem;
+        }
+      }
+    }
+  }
+  @media (max-width: 490px) {
+    .navbar-wrap {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+}
