@@ -44,4 +44,4 @@ export const INGREDIENTS_DELETE = (ingredient_id, dish_id) =>
   `delete/ingredients?ingredient_id=${ingredient_id}&dish_id=${dish_id}`;
 
 export const CLIENT_PAGE = (restaurant, id, table) => 
-  `/api/menu/${restaurant}/${id}/${table}`;
+   `/api/menu/${restaurant}/${id}/${table}`;
