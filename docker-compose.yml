@@ -58,6 +58,7 @@ services:
     volumes:
       - ./config/nginx/default.conf:/etc/nginx/nginx.conf
       - ./config/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+      - /etc/letsencrypt:/etc/letsencrypt
     ports:
       - target: 80
         published: 80
