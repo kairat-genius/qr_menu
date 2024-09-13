@@ -1,17 +1,9 @@
-FROM node:20-alpine
-WORKDIR /app
-
-# Копируем только package.json и package-lock.json
+FROM node:20-alpine AS builder
+WORKDIR /react
 COPY package.json package-lock.json ./
-
-# Устанавливаем зависимости
-RUN npm install
-
-# Копируем все остальные файлы
+RUN npm install --legacy-peer-deps
 COPY . .
+CMD ["npm", "run", "build"]
 
-# Открываем порт
-EXPOSE 5173
 
-# Запускаем приложение
-CMD ["npm", "run", "dev"]
+

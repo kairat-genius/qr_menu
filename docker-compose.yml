@@ -39,11 +39,12 @@ services:
     networks:
       - new_network
 
-  client:
-    container_name: client
+  frontend:
+    container_name: frontend
     build:
-      context: ./qr-menu
-      dockerfile: Dockerfile
+      context: ./qr-menu/
+    volumes:
+      - react_build:/react/dist
     networks:
       - new_network
 
@@ -79,3 +80,8 @@ services:
 networks:
   new_network:
     external: true
+    
+
+volumes:
+  react_build:
+

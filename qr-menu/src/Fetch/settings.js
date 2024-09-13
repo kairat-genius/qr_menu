@@ -1,4 +1,4 @@
-
+const API_DOMAIN = 'http://localhost';
 const API_PREFIX = '/api/admin/';
 const CONCATE = API_PREFIX;
 export const COOKIE_KEY = 'token';
@@ -33,7 +33,7 @@ export const CATEGORY_DELETE = (type, category_id) =>
   CONCATE + `delete/categories?type=${type}&category_id=${category_id}`;
 
 export const DISH_ADD = CONCATE + 'add/dish';
-export const DISH_GET = CONCATE + 'get/dish';
+export const DISH_GET = (category_id) => CONCATE + `get/dish?category_id=${category_id}`;
 export const DISH_DELETE = (dish_id, category_id) =>
   CONCATE + `delete/dish?dish_id=${dish_id}&category_id=${category_id}`;
 
@@ -44,4 +44,4 @@ export const INGREDIENTS_DELETE = (ingredient_id, dish_id) =>
   `delete/ingredients?ingredient_id=${ingredient_id}&dish_id=${dish_id}`;
 
 export const CLIENT_PAGE = (restaurant, id, table) => 
-   `/api/menu/${restaurant}/${id}/${table}`;
+  API_DOMAIN + `/api/menu/${restaurant}/${id}/${table}`;
