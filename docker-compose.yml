@@ -71,7 +71,7 @@ services:
         mode: host
     depends_on:
       - api
-      - client
+      - frontend
     networks:
       - new_network
 
