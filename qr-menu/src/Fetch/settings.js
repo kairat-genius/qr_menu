@@ -1,4 +1,4 @@
-const API_DOMAIN = 'http://localhost';
+const API_DOMAIN = 'https://qr-menu.pp.ua';
 const API_PREFIX = '/api/admin/';
 const CONCATE = API_PREFIX;
 export const COOKIE_KEY = 'token';
@@ -44,4 +44,4 @@ export const INGREDIENTS_DELETE = (ingredient_id, dish_id) =>
   `delete/ingredients?ingredient_id=${ingredient_id}&dish_id=${dish_id}`;
 
 export const CLIENT_PAGE = (restaurant, id, table) => 
-  API_DOMAIN + `/api/menu/${restaurant}/${id}/${table}`;
+   `/api/menu/${restaurant}/${id}/${table}`;
