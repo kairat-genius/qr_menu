@@ -29,10 +29,12 @@ services:
   
   api:
     container_name: api
-    image: qr-sys
+    image: dchnkoo/qr-sys
     build: ./qr-sys
     env_file:
       - qr-sys/.env
+    environment:
+      - QR_DOMAIN=https://qr-menu.pp.ua
     depends_on:
       - db
       - re
