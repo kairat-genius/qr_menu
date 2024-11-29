@@ -29,7 +29,7 @@ services:
   
   api:
     container_name: api
-    image: dchnkoo/qr-sys
+    image: qr-sys
     build: ./qr-sys
     env_file:
       - qr-sys/.env
