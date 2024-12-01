@@ -25,7 +25,9 @@ SECRET_KEY = 'django-insecure--95(o4^86p_+tyy%9lmci8x_wx%%l29(#n4q)pnxxh)19(y8&d
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'qr-menu.pp.ua',  
+]
 
 
 # Application definition
