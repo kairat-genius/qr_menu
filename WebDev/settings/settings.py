@@ -27,6 +27,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://qr-menu.pp.ua',  
+]
+
 # Application definition
 
 INSTALLED_APPS = [
