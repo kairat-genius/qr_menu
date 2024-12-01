@@ -1,0 +1,20 @@
+venv/
+.idea/
+db.sqlite3
+__pycache__/
+*.pyc
+*.pyo
+.env
+
+# Игнорируем папку с медиафайлами
+back_media/
+
+# Игнорируем статические файлы
+back_static/
+
+# Игнорируем миграции, кроме __init__.py
+**/migrations/*.py
+!**/migrations/__init__.py
+
+# Игнорируем любые папки storage
+**/storage/
