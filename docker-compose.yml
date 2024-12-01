@@ -14,7 +14,6 @@ services:
     image: postgres
     restart: always
     container_name: db
-    command: -p 5435
     expose:
       - 5435
     ports:
