@@ -55,6 +55,8 @@ services:
     volumes:
       - static_volume:/usr/src/app/back_static
       - media_volume:/usr/src/app/back_media
+    networks:
+      - new_network
 
   postgres:
     image: postgres
@@ -70,6 +72,8 @@ services:
       - "5433:5431"
     volumes:
       - postgres_data:/var/lib/postgresql/data/
+    networks:
+      - new_network
 
   frontend:
     container_name: frontend
