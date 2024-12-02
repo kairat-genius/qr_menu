@@ -18,7 +18,7 @@ class UserKeySerializer(serializers.ModelSerializer):
 class PrizeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Prizes
-        fields = ['id', 'text']
+        fields = ['id', 'text', 'img']
 
 # Сериализатор для связи между UserKey и Prizes
 class UserPrizeSerializer(serializers.ModelSerializer):

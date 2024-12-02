@@ -22,6 +22,8 @@ class Prizes(models.Model):
         verbose_name="Шанс выпадения",
         help_text="Вероятность выпадения приза (например, 0.1 = 10%)"
     )
+    img = models.ImageField("изображение", upload_to="img/",
+                            help_text='Поддерживаются изображения формата JPG, PNG.')
 
     class Meta:
         verbose_name = 'Приз'

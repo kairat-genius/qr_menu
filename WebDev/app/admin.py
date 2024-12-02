@@ -10,7 +10,7 @@ class PrizesAdmin(admin.ModelAdmin):
     list_display_links = ('text',)
     fieldsets = (
         (None, {
-            'fields': ('text', 'quantity', 'probability'),
+            'fields': ('text', 'quantity', 'probability', 'img'),
           }),)
 
 @admin.register(UserKey)
