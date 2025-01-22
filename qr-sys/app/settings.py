@@ -13,6 +13,9 @@ COOKIE_KEY = "QR_MENU_TOKEN"
 DATABASE="postgresql+asyncpg://test:test@localhost:5435/test"
 DATABASE_SYNC="postgresql://test:test@localhost:5435/test"
 
+# DATABASE="sqlite+aiosqlite:///database.db"
+# DATABASE_SYNC="sqlite:///database.db"
+
 # redis
 REDIS_PASSWORD="redistest"
 REDIS_HOST = "localhost"
