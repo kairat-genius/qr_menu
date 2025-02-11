@@ -46,7 +46,7 @@ services:
     build:
       context: ./frontend/cabinet
     volumes:
-      - react_build_cabinet:/react/dist
+      - react_build_cabinet:/cabinet/dist
     networks:
       - new_network
 
@@ -55,7 +55,7 @@ services:
     build:
       context: ./frontend/client
     volumes:
-      - react_build_client:/react/dist
+      - react_build_client:/client/dist
     networks:
       - new_network
 
