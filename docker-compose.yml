@@ -41,23 +41,23 @@ services:
     networks:
       - new_network
 
-  frontend_cabinet:
-    container_name: frontend_cabinet
-    build:
-      context: ./frontend/cabinet
-    volumes:
-      - react_build_cabinet:/cabinet/dist
-    networks:
-      - new_network
+  # frontend_cabinet:
+  #   container_name: frontend_cabinet
+  #   build:
+  #     context: ./frontend/cabinet
+  #   volumes:
+  #     - react_build_cabinet:/cabinet/dist
+  #   networks:
+  #     - new_network
 
-  frontend_client:
-    container_name: frontend_client
-    build:
-      context: ./frontend/client
-    volumes:
-      - react_build_client:/client/dist
-    networks:
-      - new_network
+  # frontend_client:
+  #   container_name: frontend_client
+  #   build:
+  #     context: ./frontend/client
+  #   volumes:
+  #     - react_build_client:/client/dist
+  #   networks:
+  #     - new_network
 
   nginx:
     image: nginx:latest
@@ -84,8 +84,8 @@ services:
         mode: host
     depends_on:
       - api
-      - frontend_cabinet
-      - frontend_client
+      # - frontend_cabinet
+      # - frontend_client
     networks:
       - new_network
 
@@ -96,7 +96,7 @@ networks:
     external: true
     
 
-volumes:
-  react_build_cabinet:
-  react_build_client:
+# volumes:
+#   react_build_cabinet:
+#   react_build_client:
 
