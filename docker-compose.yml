@@ -71,8 +71,8 @@ services:
       - ./config/nginx/default.conf:/etc/nginx/nginx.conf
       - ./config/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
       - /etc/letsencrypt:/etc/letsencrypt
-      - react_build_cabinet:/var/www/cabinet
-      - react_build_client:/var/www/client
+      # - react_build_cabinet:/var/www/cabinet
+      # - react_build_client:/var/www/client
     ports:
       - target: 80
         published: 80
