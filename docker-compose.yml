@@ -41,12 +41,21 @@ services:
     networks:
       - new_network
 
-  frontend:
-    container_name: frontend
+  frontend_cabinet:
+    container_name: frontend_cabinet
     build:
-      context: ./qr-menu/
+      context: ./frontend/cabinet
     volumes:
-      - react_build:/react/dist
+      - react_build_cabinet:/react/dist
+    networks:
+      - new_network
+
+  frontend_client:
+    container_name: frontend_client
+    build:
+      context: ./frontend/client
+    volumes:
+      - react_build_client:/react/dist
     networks:
       - new_network
 
@@ -62,7 +71,8 @@ services:
       - ./config/nginx/default.conf:/etc/nginx/nginx.conf
       - ./config/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
       - /etc/letsencrypt:/etc/letsencrypt
-      - react_build:/var/www/react
+      - react_build_cabinet:/var/www/cabinet
+      - react_build_client:/var/www/client
     ports:
       - target: 80
         published: 80
@@ -86,5 +96,6 @@ networks:
     
 
 volumes:
-  react_build:
+  react_build_cabinet:
+  react_build_client:
 
